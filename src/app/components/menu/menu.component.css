@@ -1,0 +1,67 @@
+/* Estilos para la barra de herramientas */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: black;
+  border-radius: 0 0 15px 15px;
+}
+
+.toolbar span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.divider {
+  border-left: 1px solid white;
+  height: 20px;
+  margin: 0 10px;
+}
+
+/* Estilos para el carrusel */
+.carousel-container {
+  height: 650px;
+  background-color: blueviolet;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container img {
+  max-width: 100%; /* La imagen se ajustará al ancho máximo del contenedor */
+  height: auto; /* La altura se ajustará automáticamente manteniendo la proporción */
+}
+
+
+
+/* Estilos para las secciones de canal */
+.channel-section {
+  margin-top: 20px;
+}
+
+.channel-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.channel-section img {
+  width: 100%;
+  height: auto;
+}

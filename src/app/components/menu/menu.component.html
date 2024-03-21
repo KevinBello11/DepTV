@@ -1,0 +1,21 @@
+<mat-toolbar color="primary" class="toolbar">
+  <span>DepTV</span>
+  <div class="spacer"></div> <!-- Espaciador para centrar las opciones -->
+  <div class="nav-links">
+    <a mat-button routerLink="/deportes">Deportes</a>
+    <span class="divider"></span> <!-- Separador -->
+    <a mat-button routerLink="#">Link 2</a>
+    <a mat-button routerLink="#">Link 3</a>
+  </div>
+</mat-toolbar>
+
+<div class="carousel-container">
+  <div class="carousel-slide" *ngFor="let image of images">
+    <img [src]="image.url" [alt]="image.alt || 'Carousel Image'">
+  </div>
+</div>
+
+<div *ngFor="let channel of channels" class="channel-section">
+  <h2>{{ channel.name }}</h2>
+  <img [src]="channel.imageUrl" [alt]="channel.name || 'Channel Image'">
+</div>
