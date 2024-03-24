@@ -1,15 +1,21 @@
+/* Estilos para el contenedor principal */
+.container {
+  margin: 20px; /* Agregar margen alrededor del contenido */
+}
+
 /* Estilos para la barra de herramientas */
 .toolbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 0 20px;
   background-color: black;
   border-radius: 0 0 15px 15px;
+  margin-bottom: 20px;
 }
 
 .toolbar span {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -21,7 +27,7 @@
 .nav-links a {
   text-decoration: none;
   color: white;
-  margin-right: 10px;
+  margin-right: 16px;
 }
 
 .spacer {
@@ -30,38 +36,47 @@
 
 .divider {
   border-left: 1px solid white;
-  height: 20px;
-  margin: 0 10px;
+  height: 16px;
+  margin: 0 12px;
 }
 
 /* Estilos para el carrusel */
 .carousel-container {
-  height: 650px;
+  height: 550px;
   background-color: blueviolet;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .carousel-container img {
-  max-width: 100%; /* La imagen se ajustará al ancho máximo del contenedor */
-  height: auto; /* La altura se ajustará automáticamente manteniendo la proporción */
-}
-
-
-
-/* Estilos para las secciones de canal */
-.channel-section {
-  margin-top: 20px;
-}
-
-.channel-section h2 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.channel-section img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
+}
+
+.horizontal-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  margin-bottom: 20px; /* Agregar margen inferior para separarlo del borde de la página */
+}
+
+.channel-item {
+  display: inline-block;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.channel-item img {
+  width: 200px;
+  height: 112px;
+  border-radius: 20px;
+}
+
+.channel-item p {
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+.tv-channel-section{
+  padding: 10px 0 0 20px;
 }

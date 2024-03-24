@@ -2,10 +2,13 @@
   <span>DepTV</span>
   <div class="spacer"></div> <!-- Espaciador para centrar las opciones -->
   <div class="nav-links">
-    <a mat-button routerLink="/deportes">Deportes</a>
+    <a mat-button routerLink="/deportes">En vivo</a>
     <span class="divider"></span> <!-- Separador -->
-    <a mat-button routerLink="#">Link 2</a>
-    <a mat-button routerLink="#">Link 3</a>
+    <a mat-button routerLink="#">Canales</a>
+    <span class="divider"></span>
+    <a mat-button routerLink="#">Ligas</a>
+    <span class="divider"></span>
+    <a mat-button routerLink="#">Próximamente</a>
   </div>
 </mat-toolbar>
 
@@ -15,7 +18,10 @@
   </div>
 </div>
 
-<div *ngFor="let channel of channels" class="channel-section">
-  <h2>{{ channel.name }}</h2>
-  <img [src]="channel.imageUrl" [alt]="channel.name || 'Channel Image'">
+<div *ngFor="let tvChannel of tvChannels" class="tv-channel-section">
+  <h2>{{ tvChannel.name }}</h2>
+  <div *ngFor="let channel of tvChannel.channels" class="channel-item" (click)="loadVideoForChannel(channel)">
+    <img [src]="channel.imageUrl" [alt]="channel.name">
+    <p>{{ channel.name }}</p>
+  </div>
 </div>
